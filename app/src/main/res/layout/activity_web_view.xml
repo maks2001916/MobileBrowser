@@ -6,21 +6,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".WebViewActivity">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbarMainTB"
         app:title="@string/app_name_ru"
-        android:background="@color/blue"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-    <GridView
-        android:id="@+id/gridGV"
+        android:id="@+id/webViewTB"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:numColumns="2"
-        android:horizontalSpacing="6dp"
-        android:verticalSpacing="6dp"/>
+        android:background="@color/blue"/>
+
+    <WebView
+        android:id="@+id/webViewWV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 </LinearLayout>
