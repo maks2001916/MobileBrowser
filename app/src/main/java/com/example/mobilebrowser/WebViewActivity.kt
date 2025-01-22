@@ -1,6 +1,8 @@
 package com.example.mobilebrowser
 
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.appcompat.widget.Toolbar
@@ -25,4 +27,15 @@ class WebViewActivity : AppCompatActivity() {
         setSupportActionBar(toolbarTB)
 
     }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {R.id.exit -> finish() }
+        return super.onOptionsItemSelected(item)
+    }
+
 }

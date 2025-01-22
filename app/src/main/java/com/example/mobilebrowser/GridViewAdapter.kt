@@ -13,7 +13,6 @@ class GridViewAdapter (
 ): BaseAdapter() {
     private var layoutInflater: LayoutInflater? = null
     private lateinit var webSiteTV: TextView
-    private lateinit var addressTV: TextView
 
     override fun getCount(): Int {
         return list.size
@@ -36,10 +35,8 @@ class GridViewAdapter (
             convertView = layoutInflater!!.inflate(R.layout.gridview_item, null)
         }
         webSiteTV = convertView!!.findViewById(R.id.siteTV)
-        addressTV = convertView.findViewById(R.id.addressTV)
 
         webSiteTV.text = list[position].webSite
-        addressTV.text = list[position].address
         return convertView
     }
 

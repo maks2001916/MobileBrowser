@@ -18,13 +18,9 @@
             android:id="@+id/siteTV"
             android:text="@string/web_site"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"/>
 
-        <TextView
-            android:id="@+id/addressTV"
-            android:text="@string/address"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

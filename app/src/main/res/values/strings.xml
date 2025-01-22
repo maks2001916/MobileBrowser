@@ -3,4 +3,5 @@
     <string name="app_name_ru">Мобильный браузер</string>
     <string name="address">Адрес</string>
     <string name="web_site">Сайт</string>
+    <string name="exit">Выход</string>
 </resources>
