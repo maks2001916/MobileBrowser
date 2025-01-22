@@ -38,7 +38,9 @@ class MainActivity : AppCompatActivity() {
         gridGV.adapter = adapter
 
         gridGV.onItemClickListener = AdapterView.OnItemClickListener { _, _, position, _ ->
-            startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(list[position].address)))
+            var intent = Intent(this@MainActivity, WebViewActivity::class.java)
+            intent.putExtra("url", list[position].address)
+            startActivity(intent)
         }
 
     }

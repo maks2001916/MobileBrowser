@@ -22,10 +22,12 @@ class WebViewActivity : AppCompatActivity() {
         toolbarTB = findViewById(R.id.webViewTB)
         webViewWV = findViewById(R.id.webViewWV)
         webViewWV.webViewClient = WebViewClient()
-        var data = intent.data
-        webViewWV.loadUrl(data.toString())
         setSupportActionBar(toolbarTB)
 
+        var url = intent.getStringExtra("url")
+        if (url != null) {
+            webViewWV.loadUrl(url)
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
